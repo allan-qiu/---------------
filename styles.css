@@ -1,0 +1,62 @@
+/* 两个实训项目共用的样式。网页离线打开即可使用。 */
+:root{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",system-ui,-apple-system,sans-serif;color:#13243a;background:#f4f7fb;font-synthesis:none}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;line-height:1.75}
+a{color:#195db6;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid #f5b31b;outline-offset:4px}
+header.site-header{background:#fff;border-bottom:1px solid #e6eaf2}
+.site-inner{width:min(1080px,calc(100% - 40px));margin:auto;display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:76px}
+.site-brand{display:flex;align-items:center;gap:12px;color:#172e51;text-decoration:none;font-weight:800;font-size:17px}
+.site-logo{background:#0f7b74;color:#fff;width:40px;height:40px;display:grid;place-items:center;border-radius:12px;font-size:16px}
+.site-nav{display:flex;flex-wrap:wrap;gap:18px;font-size:14px}
+.site-nav a{text-decoration:none;color:#536277;font-weight:600}
+.site-nav a[aria-current="page"],.site-nav a:hover{color:#087d72}
+.page{width:min(1080px,calc(100% - 40px));margin:40px auto 70px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#118a81}
+h1{font-size:clamp(28px,4vw,42px);letter-spacing:-.03em;line-height:1.3;margin:12px 0}
+p.lead{color:#5e6d83;max-width:710px;margin:12px 0 0}
+.panel{background:#fff;border:1px solid #e6ebf3;border-radius:20px;box-shadow:0 16px 45px rgba(27,55,93,.045)}
+footer.site-footer{text-align:center;color:#8390a3;font-size:12px;padding:10px 20px 35px}
+/* 首页 */
+.intro{max-width:780px;margin:65px 0 36px}
+.lab-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.lab-card{padding:28px;text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s;border-radius:22px;background:#fff;border:1px solid #e3e9f0;display:flex;flex-direction:column;gap:10px;min-height:250px}
+.lab-card:hover{transform:translateY(-5px);box-shadow:0 22px 40px rgba(21,50,92,.11)}
+.lab-index{font-size:12px;font-weight:800;color:#09847b}
+.lab-card h2{font-size:23px;margin:0;color:#1a304b}
+.lab-card p{font-size:14px;color:#627187;margin:0}
+.lab-card .open-link{margin-top:auto;color:#087e75;font-size:14px;font-weight:700}
+.lab-card.gallery-card{background:#e6f9f3;border-color:#cbeee0}
+/* 项目一：书签与返回 */
+.course-links{padding:24px 27px;margin:26px 0}
+.course-links h2{font-size:18px;margin:0 0 12px}
+.course-links ul{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0;margin:0}
+.course-links a{display:inline-flex;align-items:center;min-height:42px;padding:7px 17px;background:#e9f1fd;color:#1e5b9d;border-radius:999px;font-weight:700;text-decoration:none}
+.course-links a:hover{background:#dae9ff}
+.course-section{padding:25px 29px;margin-bottom:16px;scroll-margin-top:18px}
+.course-section h2{margin:0 0 12px;font-size:23px;color:#153b62}
+.course-section p{margin:0 0 12px;color:#40536c;font-size:16px;text-indent:2em}
+.back-to-top{display:inline-flex;gap:6px;align-items:center;font-size:14px;font-weight:700;text-decoration:none}
+/* 项目二：连续滚动缩略图与 iframe */
+.gallery-stage{margin-top:26px;background:#29c79b;border-radius:20px;overflow:hidden;box-shadow:0 20px 55px rgba(8,111,91,.12)}
+.gallery-heading{padding:20px 24px;color:#fff;text-align:center;border-bottom:2px solid rgba(255,255,255,.45)}
+.gallery-heading h2{font-size:22px;line-height:1.4;margin:0}
+.gallery-heading p{margin:5px 0 0;opacity:.92;font-size:13px}
+.gallery-viewport{overflow:hidden;padding:22px 0 18px}
+.gallery-track{display:flex;width:max-content;animation:scroll-left 28s linear infinite;will-change:transform}
+.gallery-viewport:hover .gallery-track,.gallery-viewport:focus-within .gallery-track{animation-play-state:paused}
+.gallery-group{display:flex;gap:16px;padding-right:16px}
+.photo-link{width:148px;display:flex;flex-direction:column;gap:6px;text-align:center;flex:none;text-decoration:none;color:#084f5f;font-weight:800;font-size:13px;border-radius:7px}
+.photo-link .thumb{display:block;width:100%;height:84px;object-fit:cover;border:3px solid transparent;border-radius:7px;transition:border-color .15s,transform .15s}
+.photo-link:hover .thumb{transform:translateY(-2px);border-color:#fff}
+.photo-link[aria-current="true"] .thumb{border-color:#06665e;box-shadow:0 4px 0 rgba(255,255,255,.8)}
+@keyframes scroll-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.gallery-display{padding:8px 30px 34px;display:flex;flex-direction:column;align-items:center}
+.preview-label{color:#084d43;font-size:14px;font-weight:700;margin:0 0 12px;text-align:center}
+.photo-frame{display:block;width:min(100%,760px);aspect-ratio:16/9;border:0;background:#13382f;border-radius:8px;box-shadow:0 12px 32px rgba(7,64,51,.25)}
+.viewer-body{background:#102920;color:#fff;margin:0;overflow:hidden}
+.viewer-image{display:block;width:100vw;height:100vh;object-fit:contain}
+.no-motion-note{margin:14px 0 0;color:#3b675c;font-size:12px;text-align:center}
+@media(max-width:650px){.page{margin:28px auto 46px}.site-inner{flex-wrap:wrap;padding:16px 0;gap:12px}.site-nav{gap:12px}.lab-grid{grid-template-columns:1fr}.lab-card{min-height:215px}.course-section{padding:20px}.gallery-display{padding:8px 14px 25px}.gallery-heading{padding:20px 10px}.photo-link{width:118px}.photo-link .thumb{height:72px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.gallery-track{animation:none}.gallery-group[data-copy="true"]{display:none}}

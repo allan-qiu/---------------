@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>灯箱大图预览</title><link rel="stylesheet" href="styles.css"></head>
+<body class="viewer-body"><img id="viewer" class="viewer-image" src="assets/pic/t3.jpg" alt="草原河流大图">
+<script>
+// 只允许加载实训素材内的 7 张图片，避免随意拼接外部路径。
+const photoNames = {t1:'雪山秋色',t2:'高山湖泊',t3:'草原河流',t4:'山间公路',t5:'日照雪峰',t6:'金色晚霞',t7:'海滨棕榈'};
+const requested = new URLSearchParams(window.location.search).get('img');
+const chosen = Object.prototype.hasOwnProperty.call(photoNames, requested) ? requested : 't3';
+const image = document.getElementById('viewer');
+image.src = `assets/pic/${chosen}.jpg`;
+image.alt = `${photoNames[chosen]}大图`;
+document.title = `${chosen.toUpperCase()} · ${photoNames[chosen]}`;
+</script></body></html>

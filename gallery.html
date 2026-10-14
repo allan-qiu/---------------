@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="超链接与浮动框架 HTML 实训完整网页项目"><title>项目二：简易灯箱画廊 - HTML 实训</title><link rel="stylesheet" href="styles.css"></head>
+<body><header class="site-header"><div class="site-inner">
+<a class="site-brand" href="index.html"><span class="site-logo">HTML</span><span>超链接与浮动框架实训</span></a>
+<nav class="site-nav" aria-label="主导航"><a href="index.html" >实训首页</a><a href="course.html" >项目一 · 课程简介</a><a href="gallery.html" aria-current="page">项目二 · 灯箱画廊</a></nav>
+</div></header><main class="page"><div class="eyebrow">PROJECT 02 · IFRAME GALLERY</div><h1>简易灯箱画廊</h1><p class="lead">图片自动从右向左循环滚动；鼠标放在缩略图上会暂停，移开继续。点击任意 T1–T7，下面的浮动框架将显示对应大图。</p>
+<section class="gallery-stage" aria-label="7 张风景图的循环灯箱画廊"><div class="gallery-heading"><h2>简易灯箱画廊设计</h2><p>滚动图集 · 悬停暂停 · 单击切换大图</p></div>
+<div class="gallery-viewport" aria-label="滚动缩略图"><div class="gallery-track"><div class="gallery-group" data-copy="false" ><a class="photo-link" href="viewer.html?img=t1" target="photoFrame" data-photo="t1" aria-label="在下方浮动框架查看 雪山秋色 大图" aria-current="false"><span>T1</span><img class="thumb" src="assets/pic/t1.jpg" alt="雪山秋色" draggable="false"></a>
+<a class="photo-link" href="viewer.html?img=t2" target="photoFrame" data-photo="t2" aria-label="在下方浮动框架查看 高山湖泊 大图" aria-current="false"><span>T2</span><img class="thumb" src="assets/pic/t2.jpg" alt="高山湖泊" draggable="false"></a>
+<a class="photo-link" href="viewer.html?img=t3" target="photoFrame" data-photo="t3" aria-label="在下方浮动框架查看 草原河流 大图" aria-current="true"><span>T3</span><img class="thumb" src="assets/pic/t3.jpg" alt="草原河流" draggable="false"></a>
+<a class="photo-link" href="viewer.html?img=t4" target="photoFrame" data-photo="t4" aria-label="在下方浮动框架查看 山间公路 大图" aria-current="false"><span>T4</span><img class="thumb" src="assets/pic/t4.jpg" alt="山间公路" draggable="false"></a>
+<a class="photo-link" href="viewer.html?img=t5" target="photoFrame" data-photo="t5" aria-label="在下方浮动框架查看 日照雪峰 大图" aria-current="false"><span>T5</span><img class="thumb" src="assets/pic/t5.jpg" alt="日照雪峰" draggable="false"></a>
+<a class="photo-link" href="viewer.html?img=t6" target="photoFrame" data-photo="t6" aria-label="在下方浮动框架查看 金色晚霞 大图" aria-current="false"><span>T6</span><img class="thumb" src="assets/pic/t6.jpg" alt="金色晚霞" draggable="false"></a>
+<a class="photo-link" href="viewer.html?img=t7" target="photoFrame" data-photo="t7" aria-label="在下方浮动框架查看 海滨棕榈 大图" aria-current="false"><span>T7</span><img class="thumb" src="assets/pic/t7.jpg" alt="海滨棕榈" draggable="false"></a></div><div class="gallery-group" data-copy="true" aria-hidden="true"><a class="photo-link" href="viewer.html?img=t1" target="photoFrame" data-photo="t1" aria-label="在下方浮动框架查看 雪山秋色 大图" aria-current="false"><span>T1</span><img class="thumb" src="assets/pic/t1.jpg" alt="雪山秋色" draggable="false"></a>
+<a class="photo-link" href="viewer.html?img=t2" target="photoFrame" data-photo="t2" aria-label="在下方浮动框架查看 高山湖泊 大图" aria-current="false"><span>T2</span><img class="thumb" src="assets/pic/t2.jpg" alt="高山湖泊" draggable="false"></a>
+<a class="photo-link" href="viewer.html?img=t3" target="photoFrame" data-photo="t3" aria-label="在下方浮动框架查看 草原河流 大图" aria-current="true"><span>T3</span><img class="thumb" src="assets/pic/t3.jpg" alt="草原河流" draggable="false"></a>
+<a class="photo-link" href="viewer.html?img=t4" target="photoFrame" data-photo="t4" aria-label="在下方浮动框架查看 山间公路 大图" aria-current="false"><span>T4</span><img class="thumb" src="assets/pic/t4.jpg" alt="山间公路" draggable="false"></a>
+<a class="photo-link" href="viewer.html?img=t5" target="photoFrame" data-photo="t5" aria-label="在下方浮动框架查看 日照雪峰 大图" aria-current="false"><span>T5</span><img class="thumb" src="assets/pic/t5.jpg" alt="日照雪峰" draggable="false"></a>
+<a class="photo-link" href="viewer.html?img=t6" target="photoFrame" data-photo="t6" aria-label="在下方浮动框架查看 金色晚霞 大图" aria-current="false"><span>T6</span><img class="thumb" src="assets/pic/t6.jpg" alt="金色晚霞" draggable="false"></a>
+<a class="photo-link" href="viewer.html?img=t7" target="photoFrame" data-photo="t7" aria-label="在下方浮动框架查看 海滨棕榈 大图" aria-current="false"><span>T7</span><img class="thumb" src="assets/pic/t7.jpg" alt="海滨棕榈" draggable="false"></a></div></div></div>
+<div class="gallery-display"><p class="preview-label" id="selected-label">当前图片：T3 · 草原河流</p><iframe class="photo-frame" name="photoFrame" id="photoFrame" src="viewer.html?img=t3" title="在浮动框架中显示选中的风景大图"></iframe>
+<p class="no-motion-note">提示：本页所有图片来自实训素材，无须联网。</p></div></section></main><footer class="site-footer">HTML 实训 · 项目一：页面书签 / 项目二：超链接与 iframe</footer><script>
+// 用 a 标签的 target="photoFrame" 把被点击的页面载入同名 iframe。
+// JavaScript 仅用于同步高亮与图片名称，移除这段代码依然能正常切换大图。
+(() => {
+  const names = {t1:'雪山秋色',t2:'高山湖泊',t3:'草原河流',t4:'山间公路',t5:'日照雪峰',t6:'金色晚霞',t7:'海滨棕榈'};
+  const label = document.getElementById('selected-label');
+  document.querySelectorAll('.photo-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const img = link.dataset.photo;
+      document.querySelectorAll('.photo-link').forEach(item => item.setAttribute('aria-current', String(item.dataset.photo === img)));
+      label.textContent = `当前图片：${img.toUpperCase()} · ${names[img]}`;
+    });
+  });
+})();
+</script></body></html>
